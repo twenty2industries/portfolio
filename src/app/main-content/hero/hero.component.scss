@@ -1,0 +1,35 @@
+section {
+  padding: 6rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  > .arrowDownDefault {
+    padding-top: 17rem;
+  }
+}
+
+.logosContainer {
+  width: 50rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.socials {
+  height: 10rem;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.logo {
+  height: 7rem;
+  width: 7rem;
+}
