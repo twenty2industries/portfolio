@@ -1,8 +1,4 @@
-@mixin dFlex($jc, $ai) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
-}
+@import "./../../../app/mixins";
 
 section {
   margin: 10rem 2rem;
@@ -30,6 +26,6 @@ div {
   }
 }
 
-.textBg{
+.textBg {
   position: absolute;
 }

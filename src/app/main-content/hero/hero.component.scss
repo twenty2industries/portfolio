@@ -1,13 +1,11 @@
-@mixin dFlex($jc, $ai) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
-}
+
+@import '../../../app/mixins.scss';
 
 section {
   margin: 0rem 10rem;
   @include dFlex(space-between, center);
   height: 100vh;
+  flex-wrap: wrap
 }
 
 .heroInput {

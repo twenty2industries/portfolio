@@ -7,14 +7,7 @@
   scroll-behavior: smooth;
 }
 
-
-@mixin dFlex($jc, $ai) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
-}
-
-@import './app/mixins';
+@import './app/mixins'; // why is it not working globaly? 
 
 body{
   background-color: #262E34;
@@ -26,4 +19,9 @@ h1{
 
 h2{
   font-size: 3.6rem;
+}
+
+
+div {
+  font-size: 1.8rem;
 }
