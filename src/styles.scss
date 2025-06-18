@@ -5,8 +5,16 @@
   padding: 0;
   text-decoration: none;
   scroll-behavior: smooth;
-  max-width: 1920px;
 }
+
+
+@mixin dFlex($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@import './app/mixins';
 
 body{
   background-color: #262E34;

@@ -1,27 +1,29 @@
-section {
-  padding: 6rem 10rem;
+@mixin dFlex($jc, $ai) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+section {
+  margin: 0rem 10rem;
+  @include dFlex(space-between, center);
+  height: 100vh;
 }
 
 .heroInput {
-  display: flex;
-  justify-content: center;
+  @include dFlex(center, center);
   flex-direction: column;
-  align-items: center;
 
-  > .arrowDownDefault {
+.arrowDownDefault {
     padding-top: 17rem;
   }
 }
 
 .logosContainer {
+  padding-bottom: 5rem;
   width: 50rem;
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  @include dFlex(space-evenly, center);
 }
 .socials {
   height: 10rem;
