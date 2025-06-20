@@ -1,0 +1,29 @@
+@import "./../../mixins.scss";
+section {
+  margin: 10rem 2rem;
+  @include dFlex(center, center);
+  flex-direction: column;
+}
+div {
+  text-align: center;
+  font-size: 1.8rem;
+  width: 30rem;
+  height: 38rem;
+  flex-direction: column;
+  @include dFlex(center, center);
+}
+
+.icons {
+    @include dFlex(center, center);
+    flex-direction: row;
+    gap: 2rem;
+    height: 8rem;
+  }
+  .iconImage{
+    width: 4rem;
+  }
+
+
+.textBg {
+  position: absolute;
+}
