@@ -1,0 +1,31 @@
+@import "../../mixins.scss";
+
+section {
+  padding: 0rem 16rem;
+  @include dFlex(center, center);
+  flex-direction: column;
+  
+  > .input {
+    @include dFlex(center, normal);
+    flex-direction: row;
+    margin: 10rem 0rem;
+    width: 100%;
+
+    > .contactInfo {
+      @include dFlex(center, start);
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+
+
+.formularInput{
+  width: 100%;
+    @include dFlex(start, center);
+
+    >.yourName{
+          @include dFlex(center, start);
+      flex-direction: column;
+    }
+}

@@ -3,13 +3,12 @@
 section {
   width: 100%;
   background-color: #89bcd9;
-  
-  >.mainInput{
-      @include dFlex(space-evenly, center);
-      height: 10rem;
-      >.legalNotice{
-            color: black;
 
-      }
+  > .mainInput {
+    @include dFlex(space-evenly, center);
+    height: 15rem;
+    > .legalNotice {
+      color: black;
+    }
   }
 }
