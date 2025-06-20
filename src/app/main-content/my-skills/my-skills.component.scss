@@ -12,7 +12,7 @@ section {
 }
 
 .main {
-  @include dFlex(space-evenly, center);
+  @include dFlex(space-evenly, start);
   width: 75%;
 
   > span {
