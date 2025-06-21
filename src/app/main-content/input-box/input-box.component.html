@@ -1,13 +1,17 @@
-    <div>
-      <img class="textBg" src="/images/sections/mySkills/bgTextDefault.png" alt="">
-      <p>I am currently learning</p>
-      <div class="icons">
-        <img class="iconImage" src="/images/sections/mySkills/tsDefault.png" alt="">
-        <img class="iconImage" src="/images/sections/mySkills/tsDefault.png" alt="">
-      </div>
-      Add typing effect for the text on the right side of the icon
-      To switch to the next icon:
-      Add deleting effect for the text, like removeing letter by letter
-      Affter the letters are gone the icon disapear
-      Then repeat from the beginning
-    </div>
+<div>
+  <img class="textBg" [src]="inputBoxData.backgroundImage.path" alt="">
+  <h3></h3>
+  <span class="title">{{inputBoxData.subject}}</span>
+  <div class="icons">
+    @for (item of inputBoxData.learning; track $index) {
+    <span class="currentlyLearning">
+      <img class="iconImage" [src]="item.iconPath" alt="">
+      {{item.language}}
+    </span>
+    }
+  </div>
+  <span>
+    {{inputBoxData.inputText}}
+  </span>
+  <a href=""></a>
+</div>
