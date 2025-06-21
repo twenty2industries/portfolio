@@ -8,28 +8,49 @@ section {
   flex-wrap: wrap
 }
 
+.devPicture{
+  >img{
+    width: 59.4rem;
+    height: 71rem;
+    transform: rotate(-45deg);
+  }
+}
+
 .heroInput {
   @include dFlex(center, center);
   flex-direction: column;
 
 .arrowDownDefault {
     padding-top: 17rem;
+    width: 3.9rem;
+    height: 8.9rem;
   }
 }
 
 .logosContainer {
   padding-bottom: 5rem;
-  width: 50rem;
-  flex-direction: row;
-  @include dFlex(space-evenly, center);
+  width: 60rem;
+  @include dFlex(end, end);
+  gap: 23.7rem;
 }
 .socials {
-  height: 10rem;
+  gap: 1.2rem;
   display: flex;
-  align-items: start;
+  align-items: end;
   flex-direction: column;
 }
 .logo {
-  height: 7rem;
-  width: 7rem;
+  height: 7.3rem;
+  width: 6.6rem;
+}
+
+h1{
+  font-size: 8.8rem;
+  color: #F8F6EC;
+}
+
+h2{
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  font-size: 4rem;
 }

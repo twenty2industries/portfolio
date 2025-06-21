@@ -4,17 +4,21 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
-
-
-
-
+import { HeroData } from './interfaces/hero.interface';
 
 @Component({
   selector: 'app-main-content',
-  imports: [WhyMeComponent, MySkillsComponent, MyProjectsComponent, FeedbackComponent, ContactMeComponent],
+  imports: [
+    WhyMeComponent,
+    MySkillsComponent,
+    MyProjectsComponent,
+    FeedbackComponent,
+    ContactMeComponent,
+  ],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  styleUrl: './main-content.component.scss',
 })
+
 export class MainContentComponent {
 
 }
