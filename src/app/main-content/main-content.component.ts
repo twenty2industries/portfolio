@@ -4,7 +4,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
-import { HeroData } from './interfaces/hero.interface';
+import { WhyMeData } from './interfaces/why-me.interface';
 
 @Component({
   selector: 'app-main-content',
@@ -18,7 +18,21 @@ import { HeroData } from './interfaces/hero.interface';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
-
 export class MainContentComponent {
-
+  whyMeData: WhyMeData = {
+    title: 'Why me',
+    locationIcon: {
+      path: '/images/sections/whyMe/locationDefault.png',
+      alt: 'Location icon',
+    },
+    texts: {
+      locationText: 'First text for typing effect',
+      whyMeText:
+        'Second text for typing effect, Second text for typing effect, Second text for typing effect,Second text for typing effect',
+    },
+    talkButton: {
+      path: '/images/sections/whyMe/buttonDefault.png',
+      alt: 'Talk to me button',
+    },
+  };
 }
