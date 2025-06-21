@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { InputBoxComponent } from '../../shared/input-box/input-box.component';
+import { Component, Input, input } from '@angular/core';
+import { InputBoxComponent } from '../input-box/input-box.component';
+import { MySkillsData } from '../interfaces/my-skills.interface';
 
 
 @Component({
@@ -9,5 +10,5 @@ import { InputBoxComponent } from '../../shared/input-box/input-box.component';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
-
+  @Input() mySkillsData!: MySkillsData;
 }

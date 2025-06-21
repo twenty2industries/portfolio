@@ -14,14 +14,19 @@ section {
 .main {
   @include dFlex(space-evenly, start);
   width: 75%;
+}
 
-  > span {
-    text-align: center;
-    font-size: 1.8rem;
-    width: 30rem;
-    height: 38rem;
-    flex-direction: column;
-    @include dFlex(center, center);
+span {
+  color: #89bcd9;
+  text-align: center;
+  font-size: 1.8rem;
+  gap: 1rem;
+  flex-direction: column;
+  @include dFlex(start, center);
+  flex-direction: column;
+  >img{
+    height: 6rem;
+    width: 6rem;
   }
 }
 
@@ -31,5 +36,7 @@ section {
 
 .icons {
   @include dFlex(center, center);
-  gap: 3rem;
+  flex-wrap: wrap;
+  width: 50rem;
+  gap: 5rem;
 }

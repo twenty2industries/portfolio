@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InputBoxComponent } from '../../shared/input-box/input-box.component';
+import { InputBoxComponent } from '../input-box/input-box.component';
 
 
 @Component({

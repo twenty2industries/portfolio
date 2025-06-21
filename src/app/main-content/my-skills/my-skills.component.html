@@ -1,12 +1,10 @@
 <section>
-  <h1>My Skills</h1>
+  <h1>{{mySkillsData.title}}</h1>
   <div class="main">
     <div class="icons">
-      <img src="/images/sections/mySkills/angularDefault.png" alt="">
-      <img src="/images/sections/mySkills/cssDefault.png" alt="">
-      <img src="/images/sections/mySkills/htmlDefault.png" alt="">
-      <img src="/images/sections/mySkills/jsDefault.png" alt="">
-      <img src="/images/sections/mySkills/tsDefault.png" alt="">
+      @for (item of mySkillsData.skillIcons; track $index) {
+      <span><img [src]="item.path" [alt]="item.alt"> {{item.skillText}} </span>
+      }
     </div>
     <app-input-box></app-input-box>
   </div>
