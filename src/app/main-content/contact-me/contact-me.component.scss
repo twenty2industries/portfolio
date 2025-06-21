@@ -1,31 +1,53 @@
 @import "../../mixins.scss";
 
 section {
-  padding: 0rem 16rem;
   @include dFlex(center, center);
   flex-direction: column;
-  
-  > .input {
-    @include dFlex(center, normal);
-    flex-direction: row;
-    margin: 10rem 0rem;
-    width: 100%;
+  margin:  10rem 0rem;
 
-    > .contactInfo {
+  > .input {
+    @include dFlex(space-evenly, normal);
+    flex-direction: column;
+    margin-top: 5rem; 
+    > .text {
       @include dFlex(center, start);
-      flex-direction: column;
-      gap: 2rem;
+      > span {
+        width: 44.5rem;
+      }
+            > .contactInfo {
+        @include dFlex(center, start);
+        flex-direction: column;
+        width: 44.5rem;
+      }
     }
   }
 }
 
+.formularInput {
+  @include dFlex(start, center);
+}
 
-.formularInput{
-  width: 100%;
-    @include dFlex(start, center);
+.messageInput {
+  @include dFlex(start, start);
+  flex-direction: column;
 
-    >.yourName{
-          @include dFlex(center, start);
-      flex-direction: column;
-    }
+  > input {
+    width: 91.1rem;
+    height: 14.6rem;
+  }
+}
+
+.yourName {
+  margin-top: 4rem;
+  @include dFlex(center, start);
+  flex-direction: column;
+}
+
+input {
+  background-color: #262E34;
+  width: 44.5rem;
+  height: 6rem;
+  border-radius: 3rem;
+  border-color: #89bcd9;
+  margin-bottom: 2rem;
 }

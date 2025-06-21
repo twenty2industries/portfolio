@@ -1,18 +1,20 @@
 @import "./../../mixins.scss";
 
-section{
+section {
   margin: 10rem 0rem;
   @include dFlex(center, center);
   flex-direction: column;
 
-  >div{
+  > div {
     @include dFlex(center, center);
+    flex-wrap: nowrap;
+
     gap: 10rem;
     width: 100%;
     margin-top: 5rem;
   }
 }
 
-h1{
+h1 {
   font-size: 3.6rem;
 }
