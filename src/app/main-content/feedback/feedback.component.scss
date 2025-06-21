@@ -8,10 +8,9 @@ section {
   > div {
     @include dFlex(center, center);
     flex-wrap: nowrap;
-
-    gap: 10rem;
+    gap: 12rem;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 13rem;
     flex-wrap: wrap;
   }
 }

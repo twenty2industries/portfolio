@@ -1,9 +1,9 @@
 <section>
-  <h1>Need a teamplayer? Here what my colleagues sait about me</h1>
+  <h1>Need a teamplayer? Here what my colleagues said about me</h1>
   <div>
-    <app-input-box></app-input-box>
-    <app-input-box></app-input-box>
-    <app-input-box></app-input-box>
+    @for (item of feedbackItems; track $index) {
+      <app-input-box [inputBoxData]="item"></app-input-box>
+    }
   </div>
-
 </section>
+

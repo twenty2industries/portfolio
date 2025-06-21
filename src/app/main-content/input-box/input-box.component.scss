@@ -11,7 +11,6 @@ div {
   text-align: center;
   font-size: 1.8rem;
   width: 30rem;
-  height: 38rem;
   flex-direction: column;
   @include dFlex(center, center);
 
@@ -19,6 +18,7 @@ div {
     font-size: 2.6rem;
     font-family: "Josefin Sans";
     font-weight: 400;
+    margin-bottom: 0.5rem;
   }
 
   > .title {
@@ -45,7 +45,6 @@ div {
   @include dFlex(center, center);
   flex-direction: row;
   gap: 2rem;
-  height: 8rem;
   margin: 1rem 0rem;
 
   > span {
@@ -67,4 +66,8 @@ a {
   font-size: 1.6rem;
   text-decoration: underline;
   color: #89bcd9;
+}
+
+.currentlyLearning{
+  margin: 1rem 0rem;
 }

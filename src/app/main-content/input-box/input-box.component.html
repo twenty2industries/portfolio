@@ -1,7 +1,12 @@
 <div>
   <img class="textBg" [src]="inputBoxData.backgroundImage.path" alt="">
-  <h3></h3>
+  @for (userName of inputBoxData.userNames; track $index) {
+  <h3>{{userName.name}}</h3>
+  }
   <span class="title">{{inputBoxData.subject}}</span>
+  @for (projectName of inputBoxData.projects; track $index) {
+  <span class="title">Project {{projectName.name}}</span>
+  }
   <div class="icons">
     @for (item of inputBoxData.learning; track $index) {
     <span class="currentlyLearning">
@@ -12,6 +17,10 @@
   </div>
   <span>
     {{inputBoxData.inputText}}
-  </span>
-  <a href=""></a>
-</div>
+    @for (feedback of inputBoxData.feedBackText; track $index) {
+    {{ feedback.text }}
+    } </span>
+<!--   @for (projectLink of inputBoxData.link; track $index) {
+ -->  <a href="">Linked in Profile</a>
+<!--   }
+ --></div>

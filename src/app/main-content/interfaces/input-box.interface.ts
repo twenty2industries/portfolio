@@ -1,16 +1,29 @@
 export interface InputBoxData {
-  subject: string;
+  subject?: string;
+  userNames?: {
+    name: string;
+  }[];
 
   backgroundImage: {
     path: string;
     alt: string;
   };
-  userName?: string; // Ersetzt "?feedback User Name"
+
   learning?: {
     iconPath: string;
-    language: string; // Ersetzt "currentlyLearningLanguages"
+    language: string;
   }[];
 
-  inputText: string[]; // Ersetzt "TEXT INPUT" Liste
-  linkedInProfile?: string; // Ersetzt "?Linked in Profile"
+    feedBackText?: {
+    text: string;
+  }[];
+
+  projects?: {
+    // Optionales Array von User-Objekten
+    name: string;
+  }[];
+
+  inputText?: string[];
+
+  link?: string;
 }

@@ -35,7 +35,7 @@ span {
 }
 
 .icons {
-  @include dFlex(center, center);
+  @include dFlex(normal, center);
   flex-wrap: wrap;
   width: 50rem;
   gap: 5rem;

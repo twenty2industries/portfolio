@@ -9,4 +9,5 @@ import { InputBoxData } from "../interfaces/input-box.interface";
 })
 export class InputBoxComponent {
 @Input() inputBoxData!: InputBoxData;
+@Input() feedbackData!: InputBoxData;
 }
