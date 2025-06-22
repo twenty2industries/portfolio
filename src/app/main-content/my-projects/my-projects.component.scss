@@ -44,17 +44,18 @@ section {
 .navBar {
   flex-wrap: wrap;
   @include dFlex(start, center);
-  gap: 5rem;
   padding-left: 12rem;
   height: 9rem;
 
   > span {
+    color: #89bcd9;
     @include dFlex(center, center);
-    width: 24.8rem;
+    width: 28rem;
     height: 10rem;
     font-size: 3rem;
     text-align: center;
     &.active {
+      color: white;
       background-color: #2d383f;
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;

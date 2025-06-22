@@ -55,3 +55,20 @@ p{
 span{
   font-size: 1.8rem;
 }
+
+button{
+  font-family: 'Josefin Sans';
+  font-size: 1.8rem;
+  background: none;
+  width: 13.2rem;
+  height: 4.8rem;
+  border-radius: 3rem;
+  color: #89bcd9;
+  border: solid 0.1rem #89bcd9;
+  &:hover{
+    cursor: pointer;
+    background-color: #89bcd9;
+    color: #262E34;
+  }
+;
+}

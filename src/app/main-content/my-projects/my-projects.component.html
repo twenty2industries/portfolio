@@ -2,46 +2,45 @@
   <h1>My Projects</h1>
   <div class="navBar">
     @for (project of projectData; track project.id) {
-      <span (click)="selectProject(project.id)" [class.active]="selectedProjectId === project.id">
-        {{project.id}}. {{project.title}}
-      </span>
+    <span (click)="selectProject(project.id)" [class.active]="selectedProjectId === project.id">
+      {{project.id}}. {{project.title}}
+    </span>
     }
   </div>
 
 
   @for (project of projectData; track project.id) {
-    @if (project.id === selectedProjectId) {
-    <div class="container">
-      <div class="projectInput">
-        @for (bulletPoint of project.bulletPoints; track $index) {
-          <div class="bulletPoints">
-            <img src="/images/sections/myProjects/elipse.png" alt="">
-            <h3>{{bulletPoint.title}}</h3>
-            @if ($index === 0) {
-                          <span>Duration: {{project.duration}}</span>
-
-            }
-          </div>
-          <p>{{bulletPoint.content}}</p>
-        }
-      </div>
-
-      <div class="projectContainer">
-        <span>Technologies</span>
-        <div class="icons">
-          @for (imgPath of project.technologies; track $index) {
-            <img [src]="imgPath.iconPath" [alt]="imgPath.altText">
+  @if (project.id === selectedProjectId) {
+  <div class="container">
+    <div class="projectInput">
+      @for (bulletPoint of project.bulletPoints; track $index) {
+        <div class="bulletPoints">
+          <img src="/images/sections/myProjects/elipse.png" alt="">
+          <h3>{{bulletPoint.title}}</h3>
+          @if ($index === 0) {
+            <span>{{project.duration}}</span>
           }
         </div>
-        <div class="projectPictures">
-          <img [src]="project.image" alt="">
-        </div>
-        <div class="buttonArea">
-          <img class="talkButton" src="/images/sections/whyMe/buttonDefault.png" alt="">
-          <img class="talkButton" src="/images/sections/whyMe/buttonDefault.png" alt="">
-        </div>
+      <p>{{bulletPoint.content}}</p>
+      }
+    </div>
+
+    <div class="projectContainer">
+      <span>Technologies</span>
+      <div class="icons">
+        @for (imgPath of project.technologies; track $index) {
+        <img [src]="imgPath.iconPath" [alt]="imgPath.altText">
+        }
+      </div>
+      <div class="projectPictures">
+        <img [src]="project.image" alt="">
+      </div>
+      <div class="buttonArea">
+        <button>Live Test</button>
+        <button>GitHub</button>
       </div>
     </div>
-    }
+  </div>
+  }
   }
 </section>

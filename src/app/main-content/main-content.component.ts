@@ -73,7 +73,7 @@ export class MainContentComponent {
     {
       id: 1,
       title: 'El Polo Loco',
-      duration: '4 weeks',
+      duration: 'Duration: 4 weeks',
       description: 'Jump-and-run game inspired by classic platformers.',
       technologies: [
         {
@@ -112,7 +112,7 @@ export class MainContentComponent {
     {
       id: 2,
       title: 'Join',
-      duration: '5 weeks',
+      duration: 'Duration: 5 weeks',
       description: 'Task manager inspired by the Kanban System.',
       technologies: [
         {
@@ -143,6 +143,40 @@ export class MainContentComponent {
           content:
             'How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.',
         },
+      ],
+      url: 'Try it now',
+      image: '/images/sections/myProjects/join.png',
+    },
+    {
+      id: 3,
+      title: 'Ongoing Project',
+      duration: '',
+      description: 'Task manager inspired by the Kanban System.',
+      technologies: [
+        {
+          iconPath: '/images/sections/mySkills/angularDefault.png',
+          altText: 'Angular',
+        },
+        {
+          iconPath: '/images/sections/mySkills/tsDefault.png',
+          altText: 'TypeScript',
+        },
+        {
+          iconPath: '/images/sections/mySkills/htmlDefault.png',
+          altText: 'HTML',
+        },
+        {
+          iconPath: '/images/sections/mySkills/cssDefault.png',
+          altText: 'CSS',
+        },
+      ],
+      bulletPoints: [
+        {
+          title: 'About the project',
+          content:
+            'What are you currently working on and what features are you implementing? What is the key to success in your projects?  You can mention good planning,  code quality and execution. Show a desire to learn new technologies and continually improve your skills.',
+        },
+
       ],
       url: 'Try it now',
       image: '/images/sections/myProjects/join.png',
