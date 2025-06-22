@@ -9,42 +9,54 @@ import { InputBoxData } from '../interfaces/input-box.interface';
   styleUrl: './feedback.component.scss',
 })
 export class FeedbackComponent {
+
   feedbackItems: InputBoxData[] = [
-  {
-    userNames: [{ name: 'Sahra Mueller' }],
-    projects: [{ name: 'DA Bubble' }],
-    backgroundImage: {
-      path: '/images/sections/mySkills/bgFeedbackDefault.png',
-      alt: 'Feedback background'
+    {
+      userNames: [{ name: 'Sahra Mueller' }],
+      projects: [{ name: 'DA Bubble' }],
+      backgroundImage: {
+        path: '/images/sections/mySkills/bgFeedbackDefault.png',
+        alt: 'Feedback background',
+      },
+      feedBackText: [
+        {
+          text: `‘’Claudia had to develop, format and deliver content in 
+          collaboration with the team members. She is a reliable and friendly person.‘’`,
+        },
+      ],
+      link: 'sius naros',
     },
-    feedBackText: [{
-      text: `‘’Claudia had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.‘’`
-    }],
-    link: 'sius naros'
-  },
-  {
-    userNames: [{ name: 'James Rugman' }],
-    projects: [{ name: 'Join' }],
-    backgroundImage: {
-      path: '/images/sections/mySkills/bgFeedbackDefault.png',
-      alt: 'Feedback background'
+
+    {
+      userNames: [{ name: 'James Rugman' }],
+      projects: [{ name: 'Join' }],
+      backgroundImage: {
+        path: '/images/sections/mySkills/bgFeedbackDefault.png',
+        alt: 'Feedback background',
+      },
+      feedBackText: [
+        {
+          text: `‘’Claudia is a reliable and friendly person. Works in a structured way 
+          and write a clear code. I recommend her as a colleague.‘’`,
+        },
+      ],
+      link: 'sius naros',
     },
-    feedBackText: [{
-      text: `‘’Claudia is a reliable and friendly person. Works in a structured way and write a clear code. I recommend her as a colleague.‘’`
-    }],
-    link: 'sius naros'
-  },
-  {
-    userNames: [{ name: 'Sahra Mueller' }],
-    projects: [{ name: 'El Polo Loco' }],
-    backgroundImage: {
-      path: '/images/sections/mySkills/bgFeedbackDefault.png',
-      alt: 'Feedback background'
+
+    {
+      userNames: [{ name: 'Sahra Mueller' }],
+      projects: [{ name: 'El Polo Loco' }],
+      backgroundImage: {
+        path: '/images/sections/mySkills/bgFeedbackDefault.png',
+        alt: 'Feedback background',
+      },
+      feedBackText: [
+        {
+          text: `‘’She is a trustworthy teamplayer and can cope with the stress of 
+          deadlines. Structured work and clear code.‘’`,
+        },
+      ],
+      link: 'sius naros',
     },
-    feedBackText: [{
-      text: `‘’She is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.‘’`
-    }],
-    link: 'sius naros'
-  }
-];
+  ];
 }

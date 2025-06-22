@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProjectData } from './../interfaces/projects.interface'
+
 
 @Component({
   selector: 'app-my-projects',
@@ -7,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './my-projects.component.scss'
 })
 export class MyProjectsComponent {
+@Input() projectData!: ProjectData;
+
+selectedProjectId: number = 1; 
+
+selectProject(id: number) {
+  this.selectedProjectId = id;
+}
 
 }
