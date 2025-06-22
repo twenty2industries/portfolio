@@ -174,12 +174,12 @@ export class MainContentComponent {
         {
           title: 'About the project',
           content:
-            'What are you currently working on and what features are you implementing? What is the key to success in your projects?  You can mention good planning,  code quality and execution. Show a desire to learn new technologies and continually improve your skills.',
+            'What are you currently working on and what features are you implementing? What is the key to success in your projects?  You can mention good planning,  code quality and execution. <br><br> Show a desire to learn new technologies and continually improve your skills.',
         },
 
       ],
       url: 'Try it now',
-      image: '/images/sections/myProjects/join.png',
+      image: '/images/sections/myProjects/ongoingProject.png',
     },
   ];
 }

@@ -61,6 +61,8 @@ div {
 }
 
 a {
+  z-index: 1;
+  cursor: pointer;
   margin-top: 4rem;
   font-family: "Josefin Sans";
   font-size: 1.6rem;

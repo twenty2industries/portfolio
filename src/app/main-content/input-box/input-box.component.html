@@ -1,5 +1,4 @@
 <div>
-  <img class="textBg" [src]="inputBoxData.backgroundImage.path" alt="">
   @for (userName of inputBoxData.userNames; track $index) {
   <h3>{{userName.name}}</h3>
   }
@@ -23,4 +22,7 @@
 <!--   @for (projectLink of inputBoxData.link; track $index) {
  -->  <a href="">Linked in Profile</a>
 <!--   }
- --></div>
+ 
+ -->
+  <img class="textBg" [src]="inputBoxData.backgroundImage.path" alt="">
+</div>
