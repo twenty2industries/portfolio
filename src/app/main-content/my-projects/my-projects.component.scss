@@ -42,9 +42,10 @@ section {
 }
 
 .navBar {
+  max-width: 1920px;
   flex-wrap: wrap;
   @include dFlex(start, center);
-  padding-left: 12rem;
+  padding-left: 23rem;
   height: 9rem;
 
   > span {

@@ -3,8 +3,16 @@
 
 section {
   margin: 0rem 10rem;
+  @include dFlex(center, center);
+  height: 100vh;
+  flex-wrap: wrap
+}
+#content {
+  max-width: 1920px;
+  margin: 0rem 10rem;
   @include dFlex(space-between, center);
   height: 100vh;
+  width: 100%;
   flex-wrap: wrap
 }
 

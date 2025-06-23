@@ -7,6 +7,8 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { WhyMeData } from './interfaces/why-me.interface';
 import { MySkillsData } from './interfaces/my-skills.interface';
 import { ProjectData } from './interfaces/projects.interface';
+import { ContactFormData } from './interfaces/contactMe.interface';
+
 
 @Component({
   selector: 'app-main-content',
@@ -182,4 +184,28 @@ export class MainContentComponent {
       image: '/images/sections/myProjects/ongoingProject.png',
     },
   ];
+
+  // Datenstruktur
+  contactData: ContactFormData = {
+  contactInfo: {
+    email: 'SIUSNAROS@test.de',
+    phone: '0157 123 456 68'
+  },
+  formFields: {
+    name: {
+      label: 'Your name',
+      inputType: 'text'
+    },
+    email: {
+      label: 'Your Email',
+      inputType: 'text'
+    },
+    message: {
+      label: 'Your message',
+      inputType: 'text',
+      privacyText: "I've read the privacy policy..."
+    }
+  },
+  descriptionText: 'Encourage people to contact you...'
+};
 }

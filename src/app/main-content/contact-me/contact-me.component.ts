@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ContactFormData } from "./../interfaces/contactMe.interface";
 
 @Component({
   selector: 'app-contact-me',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
-
+@Input() contactData!: ContactFormData;
 }

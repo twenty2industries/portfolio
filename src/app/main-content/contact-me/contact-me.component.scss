@@ -3,28 +3,20 @@
 section {
   @include dFlex(center, center);
   flex-direction: column;
-  margin:  10rem 0rem;
+  margin: 10rem 0rem;
 
-  > .input {
-    @include dFlex(space-evenly, normal);
-    flex-direction: column;
-    margin-top: 5rem; 
-    > .text {
-      @include dFlex(center, start);
-      > span {
-        width: 44.5rem;
-      }
-            > .contactInfo {
-        @include dFlex(center, start);
-        flex-direction: column;
-        width: 44.5rem;
-      }
-    }
+  > span {
+    width: 44.5rem;
   }
 }
 
+.input {
+  @include dFlex(normal, normal);
+  margin-top: 5rem;
+  width: 100%;
+}
 .formularInput {
-  @include dFlex(start, center);
+  @include dFlex(center, center);
 }
 
 .messageInput {
@@ -44,10 +36,39 @@ section {
 }
 
 input {
-  background-color: #262E34;
+  background-color: #262e34;
   width: 44.5rem;
   height: 6rem;
+  border: solid 0.1rem #89bcd9;
   border-radius: 3rem;
-  border-color: #89bcd9;
   margin-bottom: 2rem;
+}
+
+span {
+  font-family: "Josefin Sans";
+}
+
+div {
+  font-family: "Josefin Sans";
+}
+
+#content {
+  @include dFlex(center, center);
+  flex-direction: column;
+}
+
+.text {
+  @include dFlex(center, start);
+  flex-direction: column;
+  width: 50%;
+  > span {
+    width: 44rem;
+  }
+}
+
+.contactInfo {
+  @include dFlex(start, start);
+  flex-direction: column;
+  width: 44.5rem;
+  gap: 1.5rem;
 }
