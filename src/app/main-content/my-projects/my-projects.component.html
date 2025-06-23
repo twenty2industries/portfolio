@@ -1,12 +1,13 @@
 <section>
+  <div class="content">
   <h1>My Projects</h1>
-  <div class="navBar">
+  <nav class="navBar">
     @for (project of projectData; track project.id) {
     <span (click)="selectProject(project.id)" [class.active]="selectedProjectId === project.id">
       {{project.id}}. {{project.title}}
     </span>
     }
-  </div>
+  </nav>
 
 
   @for (project of projectData; track project.id) {
@@ -43,4 +44,6 @@
   </div>
   }
   }
+
+  </div>
 </section>

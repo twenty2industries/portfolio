@@ -20,6 +20,7 @@ import { ContactFormData } from './interfaces/contactMe.interface';
     ContactMeComponent,
   ],
   templateUrl: './main-content.component.html',
+  
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent {
@@ -188,7 +189,9 @@ export class MainContentComponent {
   // Datenstruktur
   contactData: ContactFormData = {
   contactInfo: {
+    emailImage: '/images/sections/contactMe/mailDefault.png',
     email: 'SIUSNAROS@test.de',
+    phoneImage: '/images/sections/contactMe/phoneDefault.png',
     phone: '0157 123 456 68'
   },
   formFields: {
@@ -203,9 +206,9 @@ export class MainContentComponent {
     message: {
       label: 'Your message',
       inputType: 'text',
-      privacyText: "I've read the privacy policy..."
+      privacyText: "I've read the privacy policy and agree to the processing of my data as outlined."
     }
   },
-  descriptionText: 'Encourage people to contact you...'
+  descriptionText: 'Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work. <br> Example: Feel free to get in touch with job offers or opportunities such as: ...'
 };
 }

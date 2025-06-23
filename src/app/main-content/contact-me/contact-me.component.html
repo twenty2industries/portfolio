@@ -3,32 +3,28 @@
     <h1>Contact me</h1>
     <div class="input">
       <div class="text">
-        <span>
-          Encourage people to contact you and describe what role you are interested in. Show that you will add value to
-          their projects through your work.
-          Example: Feel free to get in touch with job offers or opportunities such as: ...
-        </span>
+      <p [innerHTML]="contactData.descriptionText"></p>
       </div>
       <div class="contactInfo">
-        <div class="mail">E-mail: SIUSNAROS&#64;test.de</div>
-        <div class="tel">Tel: 0157 123 456 68</div>
+        <div class="contactInfoInput"> <img [src]="contactData.contactInfo.emailImage" alt=""> E-mail: SIUSNAROS&#64;test.de</div>
+        <div class="contactInfoInput"> <img [src]="contactData.contactInfo.phoneImage" alt=""> Tel: {{contactData.contactInfo.phone}}</div>
       </div>
 
     </div>
     <div class="formularInput">
       <div class="yourName">
-        <span> Your name </span>
-        <input type="text" />
+        <span> <img [src]="" [alt]=""> {{contactData.formFields.name.label}}</span>
+        <input id="yourNameField" class="textField" type="text" />
       </div>
       <div class="yourName">
-        <span> Your Email </span>
-        <input type="text" />
+        <span>{{contactData.formFields.email.label}}</span>
+        <input id="yourEmailField" class="textField" type="text" />
       </div>
     </div>
     <div class="messageInput">
-      <span> Your message </span>
-      <input type="text" />
-      <span>I've read the privacy policy and agree to the processing of my data as outlined.</span>
+      <span>{{contactData.formFields.message.label}}</span>
+      <input class="messageField" type="text" />
+      <div class="checkArea"> <input class="checkBox" type="checkbox" /> {{contactData.formFields.message.privacyText}}</div>
     </div>
 
   </div>

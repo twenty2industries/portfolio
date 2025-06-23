@@ -1,6 +1,8 @@
 export interface ContactFormData {
   contactInfo: {
+    emailImage: string;
     email: string;
+    phoneImage: string;
     phone: string;
   };
   formFields: {

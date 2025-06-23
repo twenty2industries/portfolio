@@ -16,16 +16,22 @@ section {
   width: 100%;
 }
 .formularInput {
-  @include dFlex(center, center);
+  @include dFlex(start, center);
+  width: 100%;
+  gap: 6rem;
 }
 
 .messageInput {
   @include dFlex(start, start);
   flex-direction: column;
 
-  > input {
+  > .messageField {
     width: 91.1rem;
     height: 14.6rem;
+    background-color: #262e34;
+    border: solid 0.1rem #89bcd9;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -35,9 +41,10 @@ section {
   flex-direction: column;
 }
 
-input {
+.textField {
+  @include dFlex(center, start);
   background-color: #262e34;
-  width: 44.5rem;
+  width: 40rem;
   height: 6rem;
   border: solid 0.1rem #89bcd9;
   border-radius: 3rem;
@@ -45,6 +52,13 @@ input {
 }
 
 span {
+  color: #89bcd9;
+  padding-left: 2rem;
+  font-family: "Josefin Sans";
+  padding-bottom: 0.5rem;
+}
+
+p {
   font-family: "Josefin Sans";
 }
 
@@ -61,7 +75,7 @@ div {
   @include dFlex(center, start);
   flex-direction: column;
   width: 50%;
-  > span {
+  > p {
     width: 44rem;
   }
 }
@@ -71,4 +85,40 @@ div {
   flex-direction: column;
   width: 44.5rem;
   gap: 1.5rem;
+  > .contactInfoInput {
+    @include dFlex(start, start);
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.checkArea {
+  @include dFlex(start, start);
+  align-items: center;
+  .checkBox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent url("/images/sections/contactMe/defaultElipse.png")
+      center/contain no-repeat;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-image: url("/images/sections/contactMe/checkElipse.png");
+    }
+
+    &:checked {
+      background-image: url("/images/sections/contactMe/checkedElipse.png");
+    }
+  }
+}
+
+input{
+  font-size: 1.8rem;
+  text-align: start;
+  text-indent: 2rem;
+  vertical-align: top; 
 }

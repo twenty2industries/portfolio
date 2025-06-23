@@ -3,12 +3,6 @@
 section {
   @include dFlex(center, normal);
   flex-direction: column;
-
-  > h1 {
-    color: #89bcd9;
-    margin-bottom: 10rem;
-    @include dFlex(center, center);
-  }
 }
 
 .container {
@@ -42,10 +36,8 @@ section {
 }
 
 .navBar {
-  max-width: 1920px;
   flex-wrap: wrap;
-  @include dFlex(start, center);
-  padding-left: 23rem;
+  @include dFlex(center, center);
   height: 9rem;
 
   > span {
@@ -103,3 +95,13 @@ section {
 span {
   font-family: "Josefin Sans";
 }
+
+content {
+  @include dFlex(center, center);
+  flex-direction: column;
+  width: 100%;
+}
+ h1 {
+    margin-bottom: 10rem;
+    @include dFlex(center, center);
+  }
