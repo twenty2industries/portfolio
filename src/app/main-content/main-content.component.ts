@@ -44,6 +44,11 @@ export class MainContentComponent {
   mySkillsData: MySkillsData = {
     title: 'My Skills',
     skillIcons: [
+            {
+        path: '/images/sections/mySkills/tsDefault.png',
+        alt: 'TypeScript',
+        skillText: 'TypeScript',
+      },
       {
         path: '/images/sections/mySkills/angularDefault.png',
         alt: 'Angular',
@@ -63,11 +68,6 @@ export class MainContentComponent {
         path: '/images/sections/mySkills/jsDefault.png',
         alt: 'JavaScript',
         skillText: 'JavaScript',
-      },
-      {
-        path: '/images/sections/mySkills/tsDefault.png',
-        alt: 'TypeScript',
-        skillText: 'TypeScript',
       },
     ],
   };
@@ -186,7 +186,6 @@ export class MainContentComponent {
     },
   ];
 
-  // Datenstruktur
   contactData: ContactFormData = {
   contactInfo: {
     emailImage: '/images/sections/contactMe/mailDefault.png',
