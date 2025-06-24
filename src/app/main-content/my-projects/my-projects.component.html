@@ -1,49 +1,55 @@
 <section>
-  <div class="content">
-  <h1>My Projects</h1>
-  <nav class="navBar">
+      <h1>My Projects</h1>
+
+    <div class="navContent">
+      <nav>
+        @for (project of projectData; track project.id) {
+        <span (click)="selectProject(project.id)" [class.active]="selectedProjectId === project.id">
+          {{project.id}}. {{project.title}}
+        </span>
+        }
+      </nav>
+    </div>
+
+
+      <div class="content">
+  <div class="input">
     @for (project of projectData; track project.id) {
-    <span (click)="selectProject(project.id)" [class.active]="selectedProjectId === project.id">
-      {{project.id}}. {{project.title}}
-    </span>
-    }
-  </nav>
-
-
-  @for (project of projectData; track project.id) {
-  @if (project.id === selectedProjectId) {
-  <div class="container">
-    <div class="projectInput">
-      @for (bulletPoint of project.bulletPoints; track $index) {
+    @if (project.id === selectedProjectId) {
+    <div class="container">
+      <div class="projectInput">
+        @for (bulletPoint of project.bulletPoints; track $index) {
         <div class="bulletPoints">
           <img src="/images/sections/myProjects/elipse.png" alt="">
           <h3>{{bulletPoint.title}}</h3>
           @if ($index === 0) {
-            <span>{{project.duration}}</span>
+          <span>{{project.duration}}</span>
           }
         </div>
-      <p [innerHTML]="bulletPoint.content"></p>
-      }
-    </div>
-
-    <div class="projectContainer">
-      <span>Technologies</span>
-      <div class="icons">
-        @for (imgPath of project.technologies; track $index) {
-        <img [src]="imgPath.iconPath" [alt]="imgPath.altText">
+        <p [innerHTML]="bulletPoint.content"></p>
         }
       </div>
-      <div class="projectPictures">
-        <img [src]="project.image" alt="">
-      </div>
-      <div class="buttonArea">
-        <button>Live Test</button>
-        <button>GitHub</button>
+
+      <div class="projectContainer">
+        <span>Technologies</span>
+        <div class="icons">
+          @for (imgPath of project.technologies; track $index) {
+          <img [src]="imgPath.iconPath" [alt]="imgPath.altText">
+          }
+        </div>
+        <div class="projectPictures">
+          <img [src]="project.image" alt="">
+        </div>
+        <div class="buttonArea">
+          <button>Live Test</button>
+          <button>GitHub</button>
+        </div>
       </div>
     </div>
-  </div>
-  }
-  }
+    }
+    }
 
   </div>
+
+      </div>
 </section>

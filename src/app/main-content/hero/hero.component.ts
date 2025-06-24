@@ -9,4 +9,6 @@ import { HeroData } from '../interfaces/hero.interface';
 })
 export class HeroComponent {
   @Input() heroData!: HeroData;
+
+  isHovered: boolean = false;
 }

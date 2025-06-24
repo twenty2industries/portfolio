@@ -9,12 +9,15 @@ section {
     color: #89bcd9;
     margin-bottom: 10rem;
   }
+  .content{
+    gap: 20rem;
+  @include dFlex(center, center);
+  flex-direction: row;
+
+  max-width: 1920px
+  }
 }
 
-.main {
-  @include dFlex(space-evenly, start);
-  width: 75%;
-}
 
 span {
   color: #89bcd9;

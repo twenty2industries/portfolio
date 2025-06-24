@@ -39,9 +39,9 @@ export class AppComponent {
       },
     },
     socials: [
-      { icon: '/images/socials/mail/mailDefault.png', alt: 'Mail' },
-      { icon: '/images/socials/github/githubDefault.png', alt: 'GitHub' },
-      { icon: '/images/socials/linkedin/linkedinDefault.png', alt: 'LinkedIn' },
+      { icon: '/images/socials/mail/mailDefault.png', alt: 'mail' },
+      { icon: '/images/socials/github/githubDefault.png', alt: 'gitHub' },
+      { icon: '/images/socials/linkedin/linkedinDefault.png', alt: 'linkedIn' },
     ],
     text: {
       name: 'Burak Bostanli',

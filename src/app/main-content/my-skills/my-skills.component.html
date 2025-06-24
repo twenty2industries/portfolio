@@ -1,6 +1,7 @@
 <section>
-  <h1>{{mySkillsData.title}}</h1>
-  <div class="main">
+    <h1>{{mySkillsData.title}}</h1>
+
+  <div class="content">
     <div class="icons">
       @for (item of mySkillsData.skillIcons; track $index) {
       <span><img [src]="item.path" [alt]="item.alt"> {{item.skillText}} </span>
@@ -8,4 +9,5 @@
     </div>
     <app-input-box [inputBoxData]="inputBoxData"></app-input-box>
   </div>
+
 </section>

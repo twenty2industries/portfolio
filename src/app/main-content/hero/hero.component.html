@@ -8,7 +8,7 @@
       <img class="logo" [src]="heroData.images.logo.path" [alt]="heroData.images.logo.alt">
       <div class="socials">
         @for (icon of heroData.socials; track $index) {
-        <img [src]="icon.icon" [alt]="icon.alt">
+        <div  [class]="icon.alt"> </div>
         }
       </div>
     </div>

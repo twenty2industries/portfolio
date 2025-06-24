@@ -1,15 +1,33 @@
 @import "../../mixins.scss";
 
 section {
-  @include dFlex(center, normal);
+  @include dFlex(center, center);
   flex-direction: column;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes smoothFadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+
+
 .container {
   @include dFlex(space-evenly, start);
-  padding: 3rem 0rem;
+  padding: 3rem 0;
   flex-wrap: wrap;
-  background-color: #2d383f;
+  opacity: 0;
+  animation: smoothFadeIn 2s ease-out forwards;
 }
 
 .projectInput {
@@ -35,23 +53,33 @@ section {
   }
 }
 
-.navBar {
-  flex-wrap: wrap;
+.navContent {
   @include dFlex(center, center);
-  height: 9rem;
+  width: 100%;
+  nav {
 
-  > span {
-    color: #89bcd9;
-    @include dFlex(center, center);
-    width: 28rem;
-    height: 10rem;
-    font-size: 3rem;
-    text-align: center;
-    &.active {
-      color: white;
-      background-color: #2d383f;
-      border-top-left-radius: 2rem;
-      border-top-right-radius: 2rem;
+    width: 150rem;
+    max-width: 1920px;
+    flex-wrap: wrap;
+    @include dFlex(start, center);
+    height: 9rem;
+
+    span {
+      
+      color: #89bcd9;
+      @include dFlex(center, center);
+      width: 28rem;
+      height: 10rem;
+      font-size: 3rem;
+      text-align: center;
+      &.active {
+              animation: fadeIn 0.8s ease-out forwards;
+
+        color: white;
+        background-color: #2d383f;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+      }
     }
   }
 }
@@ -96,12 +124,19 @@ span {
   font-family: "Josefin Sans";
 }
 
-content {
-  @include dFlex(center, center);
+.input {
+  max-width: 1920px;
+  @include dFlex(center, space-between);
   flex-direction: column;
   width: 100%;
 }
- h1 {
-    margin-bottom: 10rem;
-    @include dFlex(center, center);
-  }
+h1 {
+  margin-bottom: 10rem;
+  @include dFlex(center, center);
+}
+
+.content {
+  @include dFlex(center, center);
+  background-color: #2d383f;
+  width: 100%;
+}

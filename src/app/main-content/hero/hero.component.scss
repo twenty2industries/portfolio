@@ -1,5 +1,4 @@
-
-@import '../../../app/mixins.scss';
+@import "../../../app/mixins.scss";
 
 section {
   margin: 0rem 10rem;
@@ -13,11 +12,11 @@ section {
   margin: 0rem 10rem;
   @include dFlex(space-between, center);
   width: 100%;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .devPicture {
-  background: url('/images/sections/hero/bgShapeDefault.png');
+  background: url("/images/sections/hero/bgShapeDefault.png");
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -32,12 +31,11 @@ section {
   }
 }
 
-
 .heroInput {
   @include dFlex(center, center);
   flex-direction: column;
 
-.arrowDownDefault {
+  .arrowDownDefault {
     padding-top: 17rem;
     width: 3.9rem;
     height: 8.9rem;
@@ -55,19 +53,50 @@ section {
   display: flex;
   align-items: end;
   flex-direction: column;
+
+  .mail, .gitHub, .linkedIn {
+    width: 32px;  // Wichtige Angabe
+    height: 32px; // Wichtige Angabe
+    background-size: contain; // oder cover
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .mail {
+    background-image: url("/images/socials/mail/mailDefault.png");
+    &:hover {
+      background-image: url("/images/socials/mail/mailHover.png");
+    }
+  }
+
+  .gitHub {
+    background-image: url("/images/socials/github/githubDefault.png");
+    &:hover {
+      background-image: url("/images/socials/github/githubHover.png");
+    }
+  }
+
+  .linkedIn {
+    background-image: url("/images/socials/linkedin/linkedinDefault.png");
+    &:hover {
+      background-image: url("/images/socials/linkedin/linkedinHover.png");
+    }
+  }
 }
+
 .logo {
   height: 7.3rem;
   width: 6.6rem;
 }
 
-h1{
+h1 {
   font-size: 8.8rem;
-  color: #F8F6EC;
+  color: #f8f6ec;
 }
 
-h2{
-  font-family: 'Josefin Sans';
+h2 {
+  font-family: "Josefin Sans";
   font-weight: 400;
   font-size: 4rem;
 }
