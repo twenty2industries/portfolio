@@ -66,9 +66,23 @@ button{
   border-radius: 3rem;
   color: #89bcd9;
   border: solid 0.1rem #89bcd9;
+  transition: background-color 0.17s ease-in-out; 
+
   &:hover{
     cursor: pointer;
-    background-color: #89bcd960;
-    color: #262e34;
+    background-color: #89bcd92d;
   };
+  
 }
+
+    a {
+      font-family: "Josefin Sans";
+      color: black;
+      font-size: 2.6rem;
+      transition: color 0.17s ease-in-out; 
+
+      &:hover {
+        color: white;
+      }
+    }
+

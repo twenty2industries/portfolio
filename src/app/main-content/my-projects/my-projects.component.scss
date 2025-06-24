@@ -57,7 +57,7 @@ section {
   @include dFlex(center, center);
   width: 100%;
   nav {
-
+    cursor: pointer;
     width: 150rem;
     max-width: 1920px;
     flex-wrap: wrap;
@@ -65,13 +65,18 @@ section {
     height: 9rem;
 
     span {
-      
       color: #89bcd9;
       @include dFlex(center, center);
       width: 28rem;
       height: 10rem;
       font-size: 3rem;
       text-align: center;
+            transition: color 0.2s ease-in-out;
+
+          &:hover{
+      color: white;
+    }
+
       &.active {
               animation: fadeIn 0.8s ease-out forwards;
 
