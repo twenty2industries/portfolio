@@ -6,21 +6,31 @@ section {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes smoothFadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
 
 .container {
   @include dFlex(space-evenly, start);
@@ -71,14 +81,14 @@ section {
       height: 10rem;
       font-size: 3rem;
       text-align: center;
-            transition: color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out;
 
-          &:hover{
-      color: white;
-    }
+      &:hover {
+        color: white;
+      }
 
       &.active {
-              animation: fadeIn 0.8s ease-out forwards;
+        animation: fadeIn 0.8s ease-out forwards;
 
         color: white;
         background-color: #2d383f;
@@ -114,6 +124,15 @@ section {
   @include dFlex(space-between, center);
   padding: 3rem;
   width: 30rem;
+
+  .testButton {
+    color: #2d383f;
+    background-color: #89bcd9;
+
+    &:hover {
+      background-color: #ffffff;
+    }
+  }
 }
 
 .icons {

@@ -85,7 +85,69 @@ div {
   flex-direction: column;
   width: 44.5rem;
   gap: 1.5rem;
-  > .contactInfoInput {
+
+    .telInfoInput {
+    cursor: pointer;
+    @include dFlex(start, start); //MIXIN ERSTELLEN
+    align-items: center;
+    gap: 1.5rem;
+
+    .phoneImage {
+      @include dFlex(center, center);
+      box-shadow: none;
+      width: 32px;
+      height: 32px;
+      background: url("/images/sections/contactMe/phoneDefault.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      color: #7aa7c0;
+        > .phoneImage {
+        background: url("/images/sections/contactMe/phoneHover.png");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+
+  .mailInfoInput {
+    cursor: pointer;
+    @include dFlex(start, start); //MIXIN ERSTELLEN
+    align-items: center;
+    gap: 1.5rem;
+
+    .emailImage {
+      @include dFlex(center, center);
+      box-shadow: none;
+      width: 32px;
+      height: 32px;
+      background: url("/images/sections/contactMe/mailDefault.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      color: #64879b;
+      > .emailImage {
+        background: url("/images/sections/contactMe/mailHover.png");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:active {
+      color: #7aa7c0;
+        > .emailImage {
+        background: url("/images/sections/contactMe/mailClick.png");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .telInfoInput {
     @include dFlex(start, start);
     align-items: center;
     gap: 1.5rem;
@@ -95,6 +157,7 @@ div {
 .checkArea {
   @include dFlex(start, start);
   align-items: center;
+
   .checkBox {
     -webkit-appearance: none;
     appearance: none;
@@ -105,8 +168,7 @@ div {
       center/contain no-repeat;
     margin-right: 8px;
     cursor: pointer;
-      transition: 0.5s ease-in-out;
-
+    transition: 0.5s ease-in-out;
 
     &:hover {
       background-image: url("/images/sections/contactMe/checkElipse.png");
@@ -118,9 +180,9 @@ div {
   }
 }
 
-input{
+input {
   font-size: 1.8rem;
   text-align: start;
   text-indent: 2rem;
-  vertical-align: top; 
+  vertical-align: top;
 }

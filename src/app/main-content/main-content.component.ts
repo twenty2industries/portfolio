@@ -188,9 +188,9 @@ export class MainContentComponent {
 
   contactData: ContactFormData = {
   contactInfo: {
-    emailImage: '/images/sections/contactMe/mailDefault.png',
+    emailClass: 'emailImage',
     email: 'SIUSNAROS@test.de',
-    phoneImage: '/images/sections/contactMe/phoneDefault.png',
+    phoneClass: 'phoneImage',
     phone: '0157 123 456 68'
   },
   formFields: {

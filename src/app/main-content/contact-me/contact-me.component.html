@@ -6,8 +6,8 @@
       <p [innerHTML]="contactData.descriptionText"></p>
       </div>
       <div class="contactInfo">
-        <div class="contactInfoInput"> <img [src]="contactData.contactInfo.emailImage" alt=""> E-mail: SIUSNAROS&#64;test.de</div>
-        <div class="contactInfoInput"> <img [src]="contactData.contactInfo.phoneImage" alt=""> Tel: {{contactData.contactInfo.phone}}</div>
+        <div class="mailInfoInput"> <div [class]="contactData.contactInfo.emailClass" alt=""></div> E-mail: siusnaros&#64;test.de</div>
+        <div class="telInfoInput"> <div [class]="contactData.contactInfo.phoneClass" alt=""></div> Tel: {{contactData.contactInfo.phone}}</div>
       </div>
 
     </div>
