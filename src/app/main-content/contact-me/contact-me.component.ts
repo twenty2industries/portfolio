@@ -9,4 +9,11 @@ import { ContactFormData } from "./../interfaces/contactMe.interface";
 })
 export class ContactMeComponent {
 @Input() contactData!: ContactFormData;
+
+
+  isInputActive = false;
+
+  toggleInputFocus() {
+    this.isInputActive = !this.isInputActive;
+  }
 }
