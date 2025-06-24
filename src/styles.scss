@@ -23,7 +23,8 @@
   padding: 0;
   text-decoration: none;
   scroll-behavior: smooth;
-  font-family: 'Anta'
+  font-family: 'Anta';
+  list-style: none;
 }
 
 
@@ -67,8 +68,7 @@ button{
   border: solid 0.1rem #89bcd9;
   &:hover{
     cursor: pointer;
-    background-color: #89bcd9;
-    color: #262E34;
-  }
-;
+    background-color: #89bcd960;
+    color: #262e34;
+  };
 }

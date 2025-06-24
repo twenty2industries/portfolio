@@ -4,15 +4,14 @@
 section {
   margin: 0rem 10rem;
   @include dFlex(center, center);
+  flex-wrap: wrap;
   height: 100vh;
-  flex-wrap: wrap
 }
 
 #content {
   max-width: 1920px;
   margin: 0rem 10rem;
   @include dFlex(space-between, center);
-  height: 100vh;
   width: 100%;
   flex-wrap: wrap
 }
@@ -28,7 +27,7 @@ section {
   height: 71rem;
 
   #profilePhoto {
-    margin-top: 16rem;
+    margin-top: 23rem;
     height: auto;
   }
 }

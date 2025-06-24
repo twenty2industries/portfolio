@@ -1,10 +1,10 @@
 @import "../../mixins.scss";
 
-section {
+footer {
   width: 100%;
   background-color: #89bcd9;
 
-  > .mainInput {
+  > .content {
     @include dFlex(space-evenly, center);
     height: 15rem;
     > .legalNotice {
