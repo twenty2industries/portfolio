@@ -27,6 +27,10 @@ div {
     display: flex;
     flex-direction: column;
     align-items: end;
+    
+    >button{
+      margin-top: 2rem;
+    }
 
     > img {
       margin-top: 2.5rem;

@@ -1,12 +1,10 @@
 <section>
-  <h1>{{whymeData.title}}</h1>
+  <h1>{{ 'why-me.title' | translate }}</h1>
   <div>
     <img [src]="whymeData.locationIcon.path" [alt]="whymeData.locationIcon.alt">
     <span>
-      {{whymeData.texts.whyMeText}}
+      {{ 'why-me.whyMeText' | translate }}
         <button>Let's Talk</button>
-        <div>{{ 'why-me.title' | translate }}</div>
-<div>{{ 'why-me.hello' | translate:{name} }}</div>
 
     </span>
   </div>

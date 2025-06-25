@@ -1,6 +1,18 @@
 {
   "why-me": {
-    "hello": "hello {{name}}",
-    "title": "Translation Demo"
+    "title": "Why me",
+    "locationText": "First text for typing effect",
+    "whyMeText": "Why are you passionate about coding? You can include some key traits like: analytical thinking, creativity, persistence and collaboration. A problem-solving mindset is always nice to have.",
+    "talkButtonAlt": "Talk to me button"
+  },
+
+  "header": {
+    "logoAlt": "Logo",
+    "navLinks": {
+      "whyme": "Why me",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
   }
 }

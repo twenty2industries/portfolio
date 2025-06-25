@@ -1,17 +1,19 @@
 <header>
-    <div class="content">
-        <img [src]="headerData.logo.path" [alt]="headerData.logo.alt">
-        <nav>
-            @for (links of headerData.links; track $index) {
-                <a [href]="links.url">{{links.text}}</a>
-            }
-        </nav>
-        <div class="languageSelect">
-            @for (language of headerData.languageOptions; track $index) {
-            <button [class.active]="activeLanguage === language.code" (click)="changeLanguage(language.lang)">
-                {{language.code}}
-            </button>
-            }
-        </div>
+  <div class="content">
+    <img [src]="headerData.logo.path" [alt]="headerData.logo.alt">
+    <nav>
+      @for (link of headerData.links; track $index) {
+        <a [href]="link.url">
+          {{ 'header.navLinks.' + link.text.toLowerCase().replace(' ', '') | translate }}
+        </a>
+      }
+    </nav>
+    <div class="languageSelect">
+      @for (language of headerData.languageOptions; track $index) {
+        <button [class.active]="activeLanguage === language.code" (click)="changeLanguage(language.lang)">
+          {{language.code}}
+        </button>
+      }
     </div>
+  </div>
 </header>

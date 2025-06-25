@@ -1,6 +1,18 @@
 {
   "why-me": {
-    "hello": "Guten Tag {{name}}",
-    "title": "Translation Demo Deutsch"
+    "title": "Warum ich",
+    "locationText": "Erster Text für Typing-Effekt",
+    "whyMeText": "Warum begeisterst du dich fürs Programmieren? Du kannst Schlüsselqualifikationen nennen wie: analytisches Denken, Kreativität, Durchhaltevermögen und Teamarbeit. Eine lösungsorientierte Denkweise ist immer wertvoll.",
+    "talkButtonAlt": "Kontakt Button"
+  },
+
+  "header": {
+    "logoAlt": "Logo",
+    "navLinks": {
+      "whyme": "Über mich",
+      "skills": "Fähigkeiten",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    }
   }
 }
