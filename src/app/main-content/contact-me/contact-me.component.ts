@@ -12,6 +12,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactMeComponent {
   @Input() contactData!: ContactFormData;
 
+  submitted: boolean = false;
+
   contactDatas = {
     name: '',
     email: '',
@@ -19,8 +21,9 @@ export class ContactMeComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted) {
-          console.log(this.contactDatas);
+    if (ngForm.submitted) {
+      this.submitted = true;
+      console.log(this.submitted);
     }
   }
 }

@@ -1,7 +1,9 @@
 <section>
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
     <div id="content" ng>
       <h1>Contact me</h1>
+
       <div class="input">
         <div class="text">
           <p [innerHTML]="contactData.descriptionText"></p>
@@ -14,30 +16,51 @@
             <div [class]="contactData.contactInfo.phoneClass" alt=""></div> Tel: {{contactData.contactInfo.phone}}
           </div>
         </div>
-
       </div>
+
       <div class="formularInput">
         <div class="yourName">
-          <span> <img [src]="" [alt]=""> {{contactData.formFields.name.label}}</span>
-          <input [(ngModel)]="contactDatas.name" name="name" id="yourNameField" class="textField" type="text"
-            required />
+          @if (!name.valid && submitted) {
+          <span>Your Email is required</span>
+          } @else {
+                      <span>{{contactData.formFields.name.label}}</span>
+          } @if (name.valid && submitted) {
+          <img src="/images/sections/contactMe/agreed.png" alt="">
+          }
+            <input [(ngModel)]="contactDatas.name" #name="ngModel" name="name" id="yourNameField" class="textField" type="text" required minlength="3" />
         </div>
+
         <div class="yourName">
+          @if (!email.valid && submitted) {
+          <span>Your Email is required</span>
+          } @else {
           <span>{{contactData.formFields.email.label}}</span>
-          <input [(ngModel)]="contactDatas.email" name="email" id="yourEmailField" class="textField" type="text"
-            required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+          } @if (email.valid && submitted) {
+          <img src="/images/sections/contactMe/agreed.png" alt="">
+          }
+          <input [(ngModel)]="contactDatas.email" #email="ngModel" name="email" id="yourEmailField" class="textField" type="text" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
         </div>
+
       </div>
 
+
       <div class="messageInput">
-        <span>{{contactData.formFields.message.label}}</span>
-        <input [(ngModel)]="contactDatas.message" name="message" id="yourMessageField" class="messageField" type="text"
-          required />
+          @if (!email.valid && submitted) {
+            <span>Your Message is required</span>
+              } @else {
+                <span>{{contactData.formFields.message.label}}</span>
+              }
+
+          <input #message="ngModel" minlength="10" [(ngModel)]="contactDatas.message" name="message" id="yourMessageField" class="messageField" type="text" required />
         <div class="checkArea">
-          <input class="checkBox" type="checkbox" name="privacyCheckbox" />
-          {{contactData.formFields.message.privacyText}}
+          <div class="agreementArea">
+            <input class="checkBox" type="checkbox" name="privacyCheckbox" />
+            {{contactData.formFields.message.privacyText}}
+          </div>
         </div>
-        <input type="submit" value="submit" name="submitButton" />
+        <div class="submitArea">
+          <input class="submitButton" type="submit" value="Send" name="submitButton" />
+        </div>
       </div>
     </div>
   </form>

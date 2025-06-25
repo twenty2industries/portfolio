@@ -14,7 +14,7 @@ section {
   @include dFlex(normal, normal);
   margin-top: 5rem;
   width: 100%;
-  gap: 1rem
+  gap: 1rem;
 }
 .formularInput {
   @include dFlex(space-between, center);
@@ -32,10 +32,8 @@ section {
     border: solid 0.1rem #89bcd9;
     border-radius: 3rem;
     margin-bottom: 2rem;
-    text-align:start 
-    
-    &:focus {
-      background-color: #64879b36; // not working 
+    text-align:start &:focus {
+      background-color: #64879b36; // not working
     }
   }
 }
@@ -44,6 +42,11 @@ section {
   margin-top: 4rem;
   @include dFlex(center, start);
   flex-direction: column;
+
+  >img{
+    position: absolute;
+    padding-left: 40rem;
+  }
 }
 
 .textField {
@@ -161,8 +164,8 @@ div {
 }
 
 .checkArea {
-  @include dFlex(start, start);
-  align-items: center;
+  width: 100%;
+  @include dFlex(space-between, center);
 
   .checkBox {
     -webkit-appearance: none;
@@ -192,7 +195,27 @@ input {
   text-align: start;
   text-indent: 2rem;
   vertical-align: top;
+  
   &:focus {
     background-color: #64879b36;
+  }
+}
+
+.submitArea {
+  @include dFlex(end, center);
+  width: 100%;
+
+  .submitButton {
+    padding-right: 1.8rem;
+    width: 10.1rem;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 1.8rem;
+    background: none;
+    height: 4.8rem;
+    border-radius: 3rem;
+    color: #f8f5ec8e;
+    border: solid 0.1rem #f8f5ec8e;
+    transition: background-color 0.17s ease-in-out;
   }
 }
