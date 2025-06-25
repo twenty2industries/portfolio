@@ -2,10 +2,11 @@ import { Component, Input, input } from '@angular/core';
 import { InputBoxComponent } from '../input-box/input-box.component';
 import { MySkillsData } from '../interfaces/my-skills.interface';
 import { InputBoxData } from '../interfaces/input-box.interface';
+import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-my-skills',
-  imports: [InputBoxComponent],
+  imports: [InputBoxComponent,TranslatePipe, TranslateDirective],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss',
 })

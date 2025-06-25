@@ -14,5 +14,14 @@
       "projects": "Projekte",
       "contact": "Kontakt"
     }
+  },
+
+  "skills": {
+    "title": "Meine Fähigkeiten"
+  },
+
+  "inputBox": {
+    "subject": "Ich lerne aktuell",
+    "inputText": "Zeige, dass du motiviert bist, deine Fähigkeiten stetig zu verbessern, innovative Lösungen umzusetzen und mit neuen Technologien Schritt zu halten."
   }
 }

@@ -14,5 +14,12 @@
       "projects": "Projects",
       "contact": "Contact"
     }
+  },
+  "skills": {
+    "title": "My Skills"
+  },
+  "inputBox": {
+    "subject": "I am currently learning",
+    "inputText": "Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies."
   }
 }
