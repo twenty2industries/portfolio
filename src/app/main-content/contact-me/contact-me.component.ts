@@ -18,6 +18,7 @@ export class ContactMeComponent {
     name: '',
     email: '',
     message: '',
+    checked: false,
   };
 
   onSubmit(ngForm: NgForm) {

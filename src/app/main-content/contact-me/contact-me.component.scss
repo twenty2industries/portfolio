@@ -169,14 +169,15 @@ div {
   @include dFlex(space-between, center);
 
   .agreementArea {
-    @include dFlex(start, center);
-    
-    a{
+    @include dFlex(start, start);
+    flex-direction: column;
+
+    a {
       font-size: 1.4rem;
       color: #89bcd9;
       transition: color ease-in-out 0.15s;
-      &:active{
-        color: #F8F6EC;
+      &:active {
+        color: #f8f6ec;
       }
     }
   }
@@ -201,19 +202,24 @@ div {
       background-image: url("/images/sections/contactMe/checkedElipse.png");
     }
   }
+  .ng-invalid.submitted {
+  background-image: url("/images/sections/contactMe/errorElipse.png");
+}
 }
 
 input {
+  font-family: "Josefin Sans";
+
   outline: none;
   font-size: 1.8rem;
   text-align: start;
   text-indent: 2rem;
   vertical-align: top;
-  transition: background-color 0.2s ease; 
+  transition: background-color 0.2s ease;
   background-color: #262e34;
 
   &:focus {
-    background-color: #64879b36; 
+    background-color: #64879b36;
   }
 }
 
@@ -232,38 +238,57 @@ input {
     border-radius: 3rem;
     color: #f8f5ec8e;
     border: solid 0.1rem #f8f5ec8e;
-    transition: background-color 0.17s ease-in-out;
+  }
+
+  .readyToSubmit {
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+    transition: border 0.5s ease-in-out;
+  transition: background-color 0.2s ease;
+
+    border: solid 0.1rem #89bcd9;
+    color: #89bcd9;
+    &:hover{
+      background-color: #64879b3a;
+    }
   }
 }
 
+.invalid {
+  border-color: #e44c36;
+}
 
-  .invalid {
-    border-color: #E44C36;
-  }
+.errorText {
+  color: #e44c36;
+}
 
-  .errorText{
-    color: #E44C36;
-  }
+#error_text {
+  color: #e44c36;
+  padding: 0;
+  padding-left: 3.8rem;
+}
 
-  #yourMessageField {
+#yourMessageField {
   outline: none;
   font-size: 1.8rem;
   text-align: start;
   text-indent: 2rem;
   vertical-align: top;
-  transition: background-color 0.2s ease; 
+  transition: background-color 0.2s ease;
   background-color: #262e34;
 
   &:focus {
-    background-color: #64879b36; 
+    background-color: #64879b36;
   }
 }
 
-  #yourMessageField.invalid {
-    border-color: #E44C36;
-  }
+#yourMessageField.invalid {
+  border-color: #e44c36;
+}
 
-  #privacyText{
-    color: #F8F6EC;
-    padding: 0;
-  }
+#privacyText {
+      @include dFlex(center, center); //MIXIN ERSTELLEN
+
+  color: #f8f6ec;
+  padding: 0;
+}

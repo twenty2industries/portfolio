@@ -43,7 +43,6 @@
             name="email" id="yourEmailField" class="textField" type="text" required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
         </div>
-
       </div>
 
 
@@ -60,17 +59,21 @@
         <div class="checkArea">
           <div class="agreementArea">
 
-            <input   [(ngModel)]="contactDatas" #privacyCheckbox="ngModel" class="checkBox" type="checkbox" name="privacyCheckbox" />
-              <span id="privacyText">I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined. </span>
 
+            <span id="privacyText"> 
+              <input [(ngModel)]="contactDatas.checked" #privacyCheckbox="ngModel"    [class.submitted]="submitted"
+                class="checkBox" type="checkbox" name="privacyCheckbox" required /> I've read the <a href="">privacy
+                policy</a> and agree to the processing of my data as
+              outlined. </span>
             @if (!privacyCheckbox.valid && submitted) {
-              <span [class]="{ 'errorText': !message.valid && submitted }">Please accept the privacy policy</span>
+            <span id="error_text" [class]="{ 'errorText': !privacyCheckbox.valid && submitted }">Please accept the privacy policy.</span>
             }
-
           </div>
+
         </div>
         <div class="submitArea">
-          <input class="submitButton" type="submit" value="Send" name="submitButton" />
+          <input class="submitButton" [class]="{ 'readyToSubmit': privacyCheckbox.valid }" type="submit" value="Send"
+            name="submitButton" />
         </div>
       </div>
     </div>
