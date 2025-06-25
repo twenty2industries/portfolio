@@ -36,7 +36,6 @@ section {
   @include dFlex(space-evenly, start);
   padding: 3rem 0;
   flex-wrap: wrap;
-  opacity: 0;
   animation: smoothFadeIn 2s ease-out forwards;
 }
 
