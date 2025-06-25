@@ -43,7 +43,7 @@ section {
   @include dFlex(center, start);
   flex-direction: column;
 
-  >img{
+  > img {
     position: absolute;
     padding-left: 40rem;
   }
@@ -60,6 +60,7 @@ section {
 }
 
 span {
+  font-size: 1.4rem;
   color: #89bcd9;
   padding-left: 2rem;
   font-family: "Josefin Sans";
@@ -167,6 +168,19 @@ div {
   width: 100%;
   @include dFlex(space-between, center);
 
+  .agreementArea {
+    @include dFlex(start, center);
+    
+    a{
+      font-size: 1.4rem;
+      color: #89bcd9;
+      transition: color ease-in-out 0.15s;
+      &:active{
+        color: #F8F6EC;
+      }
+    }
+  }
+
   .checkBox {
     -webkit-appearance: none;
     appearance: none;
@@ -195,9 +209,11 @@ input {
   text-align: start;
   text-indent: 2rem;
   vertical-align: top;
-  
+  transition: background-color 0.2s ease; 
+  background-color: #262e34;
+
   &:focus {
-    background-color: #64879b36;
+    background-color: #64879b36; 
   }
 }
 
@@ -219,3 +235,35 @@ input {
     transition: background-color 0.17s ease-in-out;
   }
 }
+
+
+  .invalid {
+    border-color: #E44C36;
+  }
+
+  .errorText{
+    color: #E44C36;
+  }
+
+  #yourMessageField {
+  outline: none;
+  font-size: 1.8rem;
+  text-align: start;
+  text-indent: 2rem;
+  vertical-align: top;
+  transition: background-color 0.2s ease; 
+  background-color: #262e34;
+
+  &:focus {
+    background-color: #64879b36; 
+  }
+}
+
+  #yourMessageField.invalid {
+    border-color: #E44C36;
+  }
+
+  #privacyText{
+    color: #F8F6EC;
+    padding: 0;
+  }

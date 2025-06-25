@@ -3,7 +3,7 @@
         <img [src]="headerData.logo.path" [alt]="headerData.logo.alt">
         <nav>
             @for (links of headerData.links; track $index) {
-            <a [href]="links.url">{{links.text}}</a>
+                <a [href]="links.url">{{links.text}}</a>
             }
         </nav>
         <div class="languageSelect">
