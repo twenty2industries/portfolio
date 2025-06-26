@@ -171,15 +171,6 @@ div {
   .agreementArea {
     @include dFlex(start, start);
     flex-direction: column;
-
-    a {
-      font-size: 1.4rem;
-      color: #89bcd9;
-      transition: color ease-in-out 0.15s;
-      &:active {
-        color: #f8f6ec;
-      }
-    }
   }
 
   .checkBox {
@@ -203,8 +194,8 @@ div {
     }
   }
   .ng-invalid.submitted {
-  background-image: url("/images/sections/contactMe/errorElipse.png");
-}
+    background-image: url("/images/sections/contactMe/errorElipse.png");
+  }
 }
 
 input {
@@ -244,11 +235,11 @@ input {
     cursor: pointer;
     transition: color 0.5s ease-in-out;
     transition: border 0.5s ease-in-out;
-  transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 
     border: solid 0.1rem #89bcd9;
     color: #89bcd9;
-    &:hover{
+    &:hover {
       background-color: #64879b3a;
     }
   }
@@ -286,9 +277,13 @@ input {
   border-color: #e44c36;
 }
 
-#privacyText {
-      @include dFlex(center, center); //MIXIN ERSTELLEN
+#privacy {
+  @include dFlex(center, center); //MIXIN ERSTELLEN
 
   color: #f8f6ec;
   padding: 0;
+
+  >.privacyText{
+    font-size: 1.4rem;
+  }
 }

@@ -2,11 +2,11 @@
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
     <div id="content" ng>
-      <h1>Contact me</h1>
+      <h1>{{ 'contact.title' | translate }}</h1>
 
       <div class="input">
         <div class="text">
-          <p [innerHTML]="contactData.descriptionText"></p>
+          <p [innerHTML]=" 'contact.text' | translate "></p>
         </div>
         <div class="contactInfo">
           <div class="mailInfoInput">
@@ -21,9 +21,9 @@
       <div class="formularInput">
         <div class="yourName">
           @if (!name.valid && submitted) {
-          <span [class]="{ 'errorText': !name.valid && submitted }">Your name is required</span>
+          <span [class]="{ 'errorText': !name.valid && submitted }">{{ 'contact.required.name' | translate }}</span>
           } @else {
-          <span>{{contactData.formFields.name.label}}</span>
+          <span>{{ 'contact.formFields.name.label' | translate }}</span>
           } @if (name.valid && submitted) {
           <img src="/images/sections/contactMe/agreed.png" alt="">
           }
@@ -33,9 +33,9 @@
 
         <div class="yourName">
           @if (!email.valid && submitted) {
-          <span [class]="{ 'errorText': !email.valid && submitted }">Your Email is required</span>
+          <span [class]="{ 'errorText': !email.valid && submitted }">{{ 'contact.required.email' | translate }}</span>
           } @else {
-          <span>{{contactData.formFields.email.label}}</span>
+          <span>{{ 'contact.formFields.email.label' | translate }}</span>
           } @if (email.valid && submitted) {
           <img src="/images/sections/contactMe/agreed.png" alt="">
           }
@@ -48,29 +48,32 @@
 
       <div class="messageInput">
         @if (!message.valid && submitted) {
-        <span [class]="{ 'errorText': !message.valid && submitted }">Your Message is required</span>
+        <span [class]="{ 'errorText': !message.valid && submitted }">{{ 'contact.required.message' | translate }}</span>
         } @else {
-        <span>{{contactData.formFields.message.label}}</span>
+        <span>{{ 'contact.formFields.message.label' | translate }}</span>
         }
 
         <input #message="ngModel" minlength="10" [(ngModel)]="contactDatas.message"
           [class]="{ 'invalid': !message.valid && submitted }" name="message" id="yourMessageField" class="messageField"
           type="text" required />
+
         <div class="checkArea">
           <div class="agreementArea">
+            <div id="privacy">
+              <input [(ngModel)]="contactDatas.checked" #privacyCheckbox="ngModel" [class.submitted]="submitted"
+                class="checkBox" type="checkbox" name="privacyCheckbox" required />
 
-
-            <span id="privacyText"> 
-              <input [(ngModel)]="contactDatas.checked" #privacyCheckbox="ngModel"    [class.submitted]="submitted"
-                class="checkBox" type="checkbox" name="privacyCheckbox" required /> I've read the <a href="">privacy
-                policy</a> and agree to the processing of my data as
-              outlined. </span>
+              <div class="privacyText" [innerHTML]=" 'contact.formFields.message.privacyText' | translate ">
+              </div>
+            </div>
             @if (!privacyCheckbox.valid && submitted) {
-            <span id="error_text" [class]="{ 'errorText': !privacyCheckbox.valid && submitted }">Please accept the privacy policy.</span>
+            <span id="error_text" [class]="{ 'errorText': !privacyCheckbox.valid && submitted }">{{ 'contact.required.privacyText' | translate }}</span>
             }
           </div>
-
         </div>
+
+
+
         <div class="submitArea">
           <input class="submitButton" [class]="{ 'readyToSubmit': privacyCheckbox.valid }" type="submit" value="Send"
             name="submitButton" />

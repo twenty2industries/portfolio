@@ -23,5 +23,34 @@
   "inputBox": {
     "subject": "Ich lerne aktuell",
     "inputText": "Zeige, dass du motiviert bist, deine Fähigkeiten stetig zu verbessern, innovative Lösungen umzusetzen und mit neuen Technologien Schritt zu halten."
+  },
+
+  "contact": {
+    "title": "Kontakt",
+    "text": "Ermutige Menschen, dich zu kontaktieren, und beschreibe, an welcher Rolle du interessiert bist. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffst. Beispiel: Zögere nicht, dich mit Jobangeboten oder Möglichkeiten wie zum Beispiel ...",
+
+    "contactInfo": {
+      "email": "SIUSNAROS@test.de",
+      "phone": "0157 123 456 68"
+    },
+    "required": {
+      "email": "Deine E-Mail ist erforderlich.",
+      "name": "Dein Name ist erforderlich.",
+      "message": "Deine Nachricht ist erforderlich.",
+      "privacyText": "Bitte akzeptiere die Datenschutzerklärung."
+    },
+    "formFields": {
+      "name": {
+        "label": "Ihr Name"
+      },
+      "email": {
+        "label": "Ihre E-Mail"
+      },
+      "message": {
+        "label": "Ihre Nachricht",
+        "privacyText": "Ich habe die <a href=''>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu."
+      }
+    },
+    "descriptionText": "Kontaktieren Sie mich gerne für Job-Angebote oder Möglichkeiten wie: ... Zeigen Sie, dass Sie Mehrwert durch Ihre Arbeit bringen."
   }
 }
