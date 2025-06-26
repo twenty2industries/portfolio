@@ -15,9 +15,11 @@
       "contact": "Contact"
     }
   },
+  
   "skills": {
     "title": "My Skills"
   },
+
   "inputBox": {
     "subject": "I am currently learning",
     "inputText": "Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies."
@@ -49,5 +51,30 @@
       }
     },
     "descriptionText": "Feel free to get in touch with job offers or opportunities such as: ... Show that you will add value to their projects through your work."
+  },
+
+  "feedback": {
+    "titel": "Need a teamplayer? Here what my colleagues said about me",
+    "linkText": "Linked in Profile",
+
+    "feedback1": {
+      "userName": "Sahra Mueller",
+      "project": "Project ",
+      "projectName": "DA Bubble",
+      "text": "‘’Claudia had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.‘’",
+      "link": "sius naros"
+    },
+    "feedback2": {
+      "userName": "James Rugman",
+      "projectName": "Join",
+      "text": "‘’Claudia is a reliable and friendly person. Works in a structured way and write a clear code. I recommend her as a colleague.‘’",
+      "link": "sius naros"
+    },
+    "feedback3": {
+      "userName": "Evelyn Marx",
+      "projectName": "El Polo Loco",
+      "text": "‘’She is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.‘’",
+      "link": "sius naros"
+    }
   }
 }

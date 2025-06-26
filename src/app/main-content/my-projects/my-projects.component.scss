@@ -43,11 +43,13 @@ section {
   @include dFlex(normal, center);
   flex-direction: column;
   font-size: 1.8rem;
+  
   > p {
     font-family: "Josefin Sans";
     margin-left: 5rem;
     width: 68rem;
   }
+
 }
 
 .bulletPoints {
@@ -55,16 +57,22 @@ section {
   gap: 2rem;
   padding: 2.5rem 0rem;
   width: 100%;
+
   > h3 {
     font-size: 2.8rem;
     font-family: "Josefin Sans";
     font-weight: 400;
+  }
+
+    >span{
+    font-size: 1.8rem
   }
 }
 
 .navContent {
   @include dFlex(center, center);
   width: 100%;
+
   nav {
     cursor: pointer;
     width: 150rem;
@@ -88,7 +96,6 @@ section {
 
       &.active {
         animation: fadeIn 0.8s ease-out forwards;
-
         color: white;
         background-color: #2d383f;
         border-top-left-radius: 2rem;
@@ -101,6 +108,7 @@ section {
 .projectContainer {
   @include dFlex(center, center);
   flex-direction: column;
+
   > span {
     font-size: 1.8rem;
   }
@@ -110,6 +118,7 @@ section {
   @include dFlex(center, center);
   width: 45rem;
   height: 31rem;
+
   > img {
     width: 100%;
     object-fit: cover;
@@ -153,6 +162,7 @@ span {
   flex-direction: column;
   width: 100%;
 }
+
 h1 {
   margin-bottom: 10rem;
   @include dFlex(center, center);

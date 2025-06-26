@@ -3,7 +3,8 @@
 section {
   @include dFlex(center, center);
   flex-direction: column;
-  margin: 10rem 0rem;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
 
   > span {
     width: 44.5rem;

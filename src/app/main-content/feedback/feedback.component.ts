@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { InputBoxComponent } from '../input-box/input-box.component';
 import { InputBoxData } from '../interfaces/input-box.interface';
+import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-feedback',
-  imports: [InputBoxComponent],
+  imports: [InputBoxComponent, TranslatePipe, TranslateDirective],
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.scss',
 })
