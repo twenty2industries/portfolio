@@ -10,7 +10,7 @@
     </nav>
     <div class="languageSelect">
       @for (language of headerData.languageOptions; track $index) {
-        <button [class.active]="activeLanguage === language.code" (click)="changeLanguage(language.lang)">
+        <button [class.active]="activeLanguage === language.lang" (click)="changeLanguage(language.lang)">
           {{language.code}}
         </button>
       }

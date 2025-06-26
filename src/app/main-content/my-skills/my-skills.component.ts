@@ -26,7 +26,7 @@ export class MySkillsComponent {
       },
       {
         iconPath: '/images/sections/mySkills/vueDefault.png',
-        language: 'Vue Js',
+        language: 'Vue:js',
       },
     ],
     inputText: [
