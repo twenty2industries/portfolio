@@ -15,7 +15,7 @@
       "contact": "Contact"
     }
   },
-  
+
   "skills": {
     "title": "My Skills"
   },
@@ -32,12 +32,14 @@
       "email": "SIUSNAROS@test.de",
       "phone": "0157 123 456 68"
     },
+
     "required": {
       "email": "Your email is required.",
       "name": "Your name is required.",
       "message": "Your message is required.",
       "privacyText": "Please accept the privacy policy."
     },
+
     "formFields": {
       "name": {
         "label": "Your name"
@@ -64,17 +66,27 @@
       "text": "‘’Claudia had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.‘’",
       "link": "sius naros"
     },
+
     "feedback2": {
       "userName": "James Rugman",
       "projectName": "Join",
       "text": "‘’Claudia is a reliable and friendly person. Works in a structured way and write a clear code. I recommend her as a colleague.‘’",
       "link": "sius naros"
     },
+
     "feedback3": {
       "userName": "Evelyn Marx",
       "projectName": "El Polo Loco",
       "text": "‘’She is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.‘’",
       "link": "sius naros"
     }
+  },
+
+  
+  "currentLearning": {
+    "templateText": "I am currently learning",
+    "inputText": " that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies."
   }
+
+  
 }

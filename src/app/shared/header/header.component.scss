@@ -18,13 +18,17 @@ header {
   }
   nav {
     @include dFlex(center, center);
-    gap: 8rem;
+    gap: 5rem;
 
     a {
+      @include dFlex(center, center);
+      text-align: center;
+      width: 14rem;
       font-family: "Josefin Sans";
       color: black;
       font-size: 2.6rem;
-      transition: color 0.17s ease-in-out; 
+      transition: color 0.17s ease-in-out;
+      height: 10rem;
 
       &:hover {
         color: white;
@@ -54,6 +58,13 @@ button {
 button.active {
   color: rgb(255, 255, 255);
   background-image: url("/images/sections/navBar/languageElipse.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header nav a.active {
+  color: white;
+  background: url("../../../../public/images/sections/header/bgEllipse.png");
   background-position: center;
   background-repeat: no-repeat;
 }

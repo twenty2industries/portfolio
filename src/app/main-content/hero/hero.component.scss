@@ -16,7 +16,7 @@ section {
 }
 
 .devPicture {
-  background: url("/images/sections/hero/bgShapeDefault.png");
+  background: url("../../../../public/images/sections/hero/bgShapeDefault.png");
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -24,6 +24,14 @@ section {
   align-items: center;
   width: 59.4rem;
   height: 71rem;
+  transition: background ease-in-out 0.5s;
+  @include dFlex(center, center);
+
+  &:hover {
+    background: url("../../../../public/images/sections/hero/bgShapeHover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   #profilePhoto {
     margin-top: 23rem;
@@ -36,9 +44,15 @@ section {
   flex-direction: column;
 
   .arrowDownDefault {
-    padding-top: 17rem;
+    background-image: url("../../../../public/images/ui/arrow/arrowDownDefault.png");
+    background-position: center;
+    background-repeat: no-repeat;
     width: 3.9rem;
-    height: 8.9rem;
+    height: 12rem;
+    transition: background-image ease-in-out 0.5s;
+    &:hover {
+      background-image: url("../../../../public/images/ui/arrow/arrowDownHober.png");
+    }
   }
 }
 
@@ -46,7 +60,8 @@ section {
   padding-bottom: 5rem;
   width: 60rem;
   @include dFlex(end, end);
-  gap: 23.7rem;
+  gap: 19.5rem;
+  margin-top: 5rem;
 }
 .socials {
   gap: 1.2rem;
@@ -54,40 +69,51 @@ section {
   align-items: end;
   flex-direction: column;
 
-  .mail, .gitHub, .linkedIn {
-    width: 32px;  // Wichtige Angabe
-    height: 32px; // Wichtige Angabe
-    background-size: contain; // oder cover
+  .mail,
+  .gitHub,
+  .linkedIn {
+    width: 32px;
+    height: 32px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
   }
 
   .mail {
-    background-image: url("/images/socials/mail/mailDefault.png");
+    background-image: url("../../../../public/images/socials/mail/mailDefault.png");
     &:hover {
-      background-image: url("/images/socials/mail/mailHover.png");
+      background-image: url("../../../../public/images/socials/mail/mailHover.png");
     }
   }
 
   .gitHub {
-    background-image: url("/images/socials/github/githubDefault.png");
+    background-image: url("../../../../public/images/socials/github/githubDefault.png");
     &:hover {
-      background-image: url("/images/socials/github/githubHover.png");
+      background-image: url("../../../../public/images/socials/github/githubHover.png");
     }
   }
 
   .linkedIn {
-    background-image: url("/images/socials/linkedin/linkedinDefault.png");
+    background-image: url("../../../../public/images/socials/linkedin/linkedinDefault.png");
     &:hover {
-      background-image: url("/images/socials/linkedin/linkedinHover.png");
+      background-image: url("../../../../public/images/socials/linkedin/linkedinHover.png");
     }
   }
 }
 
 .logo {
+  background-image: url("../../../../public/images/ui/logo/logoDefault.png");
+  background-position: center;
+  background-repeat: no-repeat;
   height: 7.3rem;
-  width: 6.6rem;
+  width: 15rem;
+  transition: background-image ease-in-out 0.5s;
+  &:hover {
+    background-image: url("../../../../public/images/ui/logo/logoHover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 h1 {
@@ -99,4 +125,5 @@ h2 {
   font-family: "Josefin Sans";
   font-weight: 400;
   font-size: 4rem;
+  padding-bottom: 19rem;
 }

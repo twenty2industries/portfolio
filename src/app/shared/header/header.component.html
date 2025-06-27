@@ -1,9 +1,15 @@
 <header>
   <div class="content">
+
+    <a href="#hero">
     <img [src]="headerData.logo.path" [alt]="headerData.logo.alt">
+
+    </a>
+
     <nav>
       @for (link of headerData.links; track $index) {
-        <a [href]="link.url">
+        <a [href]="link.url"       [class.active]="activeLink === link.url"
+      (click)="setActiveLink(link.url)">
           {{ 'header.navLinks.' + link.text.toLowerCase().replace(' ', '') | translate }}
         </a>
       }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -11,6 +11,7 @@ import {
   TranslatePipe,
   TranslateDirective,
 } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,7 @@ export class AppComponent {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
-  }
+  };
 
   title = 'portfolio';
 
